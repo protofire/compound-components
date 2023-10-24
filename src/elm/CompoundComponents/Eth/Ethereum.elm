@@ -132,6 +132,9 @@ etherscanUrl network urlValue =
         BaseGoerli ->
             Just ("https://goerli.basescan.org/" ++ linkType ++ "/" ++ linkValue)
 
+        Harmony ->
+            Just ("https://explorer.harmony.one/" ++ linkType ++ "/" ++ linkValue)
+
         _ ->
             Nothing
 

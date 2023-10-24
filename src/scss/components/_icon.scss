@@ -58,7 +58,8 @@
   }
 
   &--ETH,
-  &--WETH {
+  &--WETH,
+  &--1ETH {
     background-image: url('/compound-components/assets/asset_ETH.svg');
   }
 
@@ -90,7 +91,8 @@
     background-image: url('/compound-components/assets/asset_UNI.svg');
   }
 
-  &--USDC {
+  &--USDC,
+  &--1USDC {
     background-image: url('/compound-components/assets/asset_USDC.svg');
   }
 
@@ -98,7 +100,8 @@
     background-image: url('/compound-components/assets/asset_USDP.svg');
   }
 
-  &--USDT {
+  &--USDT,
+  &--1USDT {
     background-image: url('/compound-components/assets/asset_USDT.svg');
   }
 
@@ -113,6 +116,10 @@
 
   &--ZRX {
     background-image: url('/compound-components/assets/asset_ZRX.svg');
+  }
+
+  &--WONE {
+    background-image: url('/compound-components/assets/asset_WONE.svg');
   }
 
   &--coinbase {

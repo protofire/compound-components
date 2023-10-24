@@ -24,6 +24,7 @@ type Network
     | OptimismGoerli
     | Base
     | BaseGoerli
+    | Harmony
 
 
 networkFromId : Int -> Network
@@ -89,6 +90,8 @@ networkFromId networkIdVal =
         421613 ->
             ArbitrumGoerli
 
+        1666600000 ->
+            Harmony
         _ ->
             Unknown
 
@@ -113,6 +116,9 @@ networkFromName name =
 
         "development" ->
             Development
+
+        "harmony" ->
+            Harmony
 
         _ ->
             MainNet
@@ -178,6 +184,9 @@ networkName network =
         Development ->
             "Development"
 
+        Harmony ->
+            "Harmony"
+
         Unknown ->
             "unknown"
 
@@ -242,6 +251,9 @@ networkId network =
         ArbitrumGoerli ->
             421613
 
+        Harmony ->
+            1666600000
+
         Unknown ->
             9999
 
@@ -305,6 +317,9 @@ getEtherscanDomain network =
 
         Development ->
             Nothing
+
+        Harmony ->
+            Just "explorer.harmony.one"
 
         Unknown ->
             Nothing

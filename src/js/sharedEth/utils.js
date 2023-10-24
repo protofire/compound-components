@@ -104,6 +104,9 @@ function networkFromId(id) {
     case 999:
       return 'development';
 
+    case 1666600000:
+      return 'harmony';
+
     default:
       'development';
   }

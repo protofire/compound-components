@@ -34,7 +34,8 @@
     background-image: url('/compound-components/assets/ctoken_dai_product.svg');
   }
 
-  &--cETH {
+  &--cETH,
+  &--c1ETH {
     background-image: url('/compound-components/assets/ctoken_eth_product.svg');
   }
 
@@ -66,7 +67,8 @@
     background-image: url('/compound-components/assets/ctoken_uni_product.svg');
   }
 
-  &--cUSDC {
+  &--cUSDC,
+  &--c1USDC {
     background-image: url('/compound-components/assets/ctoken_usdc_product.svg');
   }
 
@@ -74,7 +76,8 @@
     background-image: url('/compound-components/assets/ctoken_usdp_product.svg');
   }
 
-  &--cUSDT {
+  &--cUSDT,
+  &--c1USDT {
     background-image: url('/compound-components/assets/ctoken_usdt_product.svg');
   }
 
@@ -92,5 +95,9 @@
 
   &--cZRX {
     background-image: url('/compound-components/assets/ctoken_zrx_product.svg');
+  }
+  
+  &--cWONE {
+    background-image: url('/compound-components/assets/ctoken_cwone_product.svg');
   }
 }
