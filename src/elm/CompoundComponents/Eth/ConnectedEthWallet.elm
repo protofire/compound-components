@@ -27,7 +27,7 @@ import CompoundComponents.Eth.Ethereum exposing (Account(..), CustomerAddress(..
 import CompoundComponents.Eth.Network exposing (Network, networkFromId, networkId)
 import CompoundComponents.Eth.ProviderInfo as EthProviderInfo
 import CompoundComponents.Functions exposing (handleError)
-import CompoundComponents.Utils.CompoundHtmlAttributes exposing (HrefLinkType(..), class, id, onClickStopPropagation)
+import CompoundComponents.Utils.CompoundHtmlAttributes exposing (HrefLinkType(..), class, href, id, onClickStopPropagation, target)
 import CompoundComponents.Utils.Markup
 import CompoundComponents.Utils.NumberFormatter exposing (formatTokenBalanceWithSymbol)
 import Decimal exposing (Decimal)
@@ -35,6 +35,7 @@ import Html exposing (Html, a, button, div, h3, h4, h5, p, span, text)
 import Html.Events exposing (onClick)
 import Json.Decode
 import Strings.Translations as Translations
+
 
 
 type WalletProviderType
@@ -484,7 +485,7 @@ termsView userLanguage isCompoundChain =
             [ p [ class "small" ]
                 [ text (Translations.choose_wallet_terms_part1 userLanguage)
                 , text " "
-                , a [ onClick <| ForSelf <| RequestShowTerms ] [ text (Translations.choose_wallet_terms_part2 userLanguage) ]
+                , a (target "_blank" :: href External "https://doc.swap.country/terms-of-service-e096ae912a54464084a176f98127bf35") [ text (Translations.choose_wallet_terms_part2 userLanguage) ]
                 ]
             ]
 
@@ -582,13 +583,13 @@ chooseWalletView userLanguage isCompoundChain ({ chooseWalletState } as model) =
                             ++ headerDescriptions
                             ++ [ div [ class "connect-choices" ]
                                     ([ connectItemView userLanguage isCompoundChain Metamask ]
-                                        ++ lineDivider
-                                        ++ ledgerItem
-                                        ++ [ connectItemView userLanguage isCompoundChain WalletConnect
-                                           ]
-                                        ++ coinbaseWalletItem
-                                        ++ lineDivider
-                                        ++ [ connectItemView userLanguage isCompoundChain Tally ]
+                                        -- ++ lineDivider
+                                        -- ++ ledgerItem
+                                        -- ++ [ connectItemView userLanguage isCompoundChain WalletConnect
+                                        --    ]
+                                        -- ++ coinbaseWalletItem
+                                        -- ++ lineDivider
+                                        -- ++ [ connectItemView userLanguage isCompoundChain Tally ]
                                     )
                                ]
                             ++ [ termsView userLanguage isCompoundChain ]
