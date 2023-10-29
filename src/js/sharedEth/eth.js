@@ -49,13 +49,13 @@ function getBlockNumberForCall(blockNumber) {
 }
 
 function makeEth(dataProviders, networkMap, networkAbiMap, configNameToAddressMappings, defaultNetwork) {
-  const targetAbiMap = networkAbiMap[defaultNetwork] || networkAbiMap['mainnet'];
+  const targetAbiMap = networkAbiMap[defaultNetwork] || networkAbiMap['harmony'];
 
   let networkAddressToNameMap = Object.entries(configNameToAddressMappings).reduce((acc, [key, value]) => {
     acc[key] = reverseObject(value);
     return acc;
   }, {});
-  const targetAddressToNameMap = networkAddressToNameMap[defaultNetwork] || networkAddressToNameMap['mainnet'];
+  const targetAddressToNameMap = networkAddressToNameMap[defaultNetwork] || networkAddressToNameMap['harmony'];
 
   return {
     trxEth: undefined,
@@ -386,7 +386,7 @@ function withTrxWeb3(eth, fnTrxWeb3, fnEls) {
 }
 
 async function getLedgerAddressAndBalance(eth, derivationPath, useRopsen = false) {
-  const desiredProvider = useRopsen ? 'ropsten' : 'mainnet';
+  const desiredProvider = useRopsen ? 'ropsten' : 'harmony';
 
   let mainnetEth = new Eth(eth.dataProviders[desiredProvider]);
   mainnetEth.type = 'call';
@@ -461,8 +461,8 @@ function setNetworkId(eth, networkId) {
   } else {
     // TODO: This?
     eth.dataEth = undefined;
-    eth.currentAbiMap = eth.networkAbiMap['mainnet'];
-    eth.currentAddressToNameMap = eth.networkAddressToNameMap['mainnet'];
+    eth.currentAbiMap = eth.networkAbiMap['harmony'];
+    eth.currentAddressToNameMap = eth.networkAddressToNameMap['harmony'];
   }
 }
 

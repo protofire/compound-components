@@ -177,8 +177,8 @@ function subscribeToTryConnect(app, eth, globEthereum, defaultNetworkId, walletC
       );
 
       if (!connected) {
-        // Otherwise, let's connect to mainnet to show numbers
-        establishConnection(app, eth, 1, null, null, PROVIDER_TYPE_NONE);
+        // Otherwise, let's connect to harmony to show numbers
+        establishConnection(app, eth, 1666600000, null, null, PROVIDER_TYPE_NONE);
 
         if (!storage('skipConnectModal').get(false) && showProvider) {
           // Popup dialog
