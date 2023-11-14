@@ -145,7 +145,7 @@ async function connectShowAccount(eth, showAccount) {
   };
 }
 
-async function connectWalletConnect(eth, disallowAuthDialog = false, desiredNetworkId = 1, walletConnectProjectId) {
+async function connectWalletConnect(eth, disallowAuthDialog = false, desiredNetworkId = 1666600000, walletConnectProjectId) {
   let trxProvider;
 
   try {
@@ -153,6 +153,7 @@ async function connectWalletConnect(eth, disallowAuthDialog = false, desiredNetw
       projectId: walletConnectProjectId,
       chains: [desiredNetworkId],
       showQrModal: true,
+      rpcMap: { [1666600000]: 'https://api.harmony.one' }
     });
 
     // Open the walletconnect modal

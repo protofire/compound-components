@@ -62,7 +62,7 @@ async function connectToTrxProvider(
   walletConnectProjectId,
   disallowAuthDialog = false,
   showAccount = undefined,
-  desiredNetworkId = 1
+  desiredNetworkId = 1666600000
 ) {
   // We support 4 real provider types
   // 1. Ledger
