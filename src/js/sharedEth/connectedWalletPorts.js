@@ -129,7 +129,7 @@ function subscribeToTrxProviderChanges(app, eth, globEthereum, walletConnectProj
       subscribeToAccountChanges(app, globEthereum);
       subscribeToNetworkChanges(app, eth, globEthereum);
 
-      const desiredNetworkId = ledgerWalletConnectRopsten ? 3 : 1;
+      const desiredNetworkId = ledgerWalletConnectRopsten ? 3 : 1666600000;
       await connectToTrxProvider(
         app,
         eth,
