@@ -485,7 +485,7 @@ termsView userLanguage isCompoundChain =
             [ p [ class "small" ]
                 [ text (Translations.choose_wallet_terms_part1 userLanguage)
                 , text " "
-                , a (target "_blank" :: href External "https://harmonyone.notion.site/Welcome-to-Lend-Docs-739d2643f9a74ee9a4f6672bd43213bf?pvs=4") [ text (Translations.choose_wallet_terms_part2 userLanguage) ]
+                , a (target "_blank" :: href External "https://docs.lend.country") [ text (Translations.choose_wallet_terms_part2 userLanguage) ]
                 ]
             ]
 
